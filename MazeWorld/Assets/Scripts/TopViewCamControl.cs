@@ -25,15 +25,19 @@ public class TopViewCamControl : MonoBehaviour
     private const float dist = 520;
 
     private void SetAgentCamera(int ID){
-          for (int i = 0; i < canvas.Length; i++){
+        for (int i = 0; i < cameras.Length; i++) {
+            cameras[i].enabled = false;
+        }
+        for (int i = 0; i < canvas.Length; i++){
             canvas[i].SetActive(false);
-          }
-          GameObject obj = GameObject.Find("Game"+(ID+1));
-          Vector3 pos = obj.transform.position;
-          GameObject mycanvas = obj.transform.GetChild(21).gameObject;
-          mycanvas.SetActive(true);
-          transform.position = new Vector3(pos.x, pos.y + dist, pos.z);
-          transform.LookAt(pos);
+        }
+        GameObject obj = GameObject.Find("Game"+(ID+1));
+        Vector3 pos = obj.transform.position;
+        GameObject mycanvas = obj.transform.GetChild(20).gameObject;
+        mycanvas.SetActive(true);
+        cameras[ID].enabled = true;
+        //transform.position = new Vector3(pos.x, pos.y + dist, pos.z);
+        //transform.LookAt(pos);
     }
 
 

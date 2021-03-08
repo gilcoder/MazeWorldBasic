@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2330596763760161849}
   - component: {fileID: 2330596763760162246}
   - component: {fileID: 2330596763760161853}
-  - component: {fileID: 4486463854225251221}
-  - component: {fileID: -7138061869902290335}
+  - component: {fileID: 7035705499328862745}
+  - component: {fileID: 3867696313893859905}
   m_Layer: 0
   m_Name: LifeBall
   m_TagString: Life
@@ -112,7 +112,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4486463854225251221
+--- !u!114 &7035705499328862745
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,30 +121,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 2330596763760162247}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acf236d85d4da56b59e90fd17f808813, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TopLeftCornerObject: {fileID: 0}
-  LowerRightCornerObject: {fileID: 0}
-  speed: 10
---- !u!114 &-7138061869902290335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2330596763760162247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 684f4d8766ebee23693f7e7a548f670f, type: 3}
+  m_Script: {fileID: 11500000, guid: 44f27d67f7844743798c5d1bcda4139a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   agents: []
+  causeEpisodeToEnd: 0
   maxTouch: 1
   painForOverTouch: 0
   painForViolatinPrecondition: 0
-  rewardValue: 10
+  rewardValue: 1
   precondition: {fileID: 0}
-  precondictionMin: 1
-  triggerOnStay: 1
+  multiplePreconditions: {fileID: 0}
+  triggerOnStay: 0
   allowNext: 0
+--- !u!114 &3867696313893859905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2330596763760162247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9576c153ea70b7c30b97fcbf3af7574b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}

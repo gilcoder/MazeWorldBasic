@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 7154991012949597943}
   - component: {fileID: 7154991012949597960}
   - component: {fileID: 7154991012949597939}
-  - component: {fileID: -9172219847358794455}
-  - component: {fileID: 2520191691792080443}
+  - component: {fileID: 6593932545652173397}
+  - component: {fileID: -5758688904424124206}
   m_Layer: 0
   m_Name: FireBall
   m_TagString: Fire
@@ -112,7 +112,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-9172219847358794455
+--- !u!114 &6593932545652173397
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,28 +121,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 7154991012949597961}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acf236d85d4da56b59e90fd17f808813, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
---- !u!114 &2520191691792080443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7154991012949597961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 684f4d8766ebee23693f7e7a548f670f, type: 3}
+  m_Script: {fileID: 11500000, guid: 44f27d67f7844743798c5d1bcda4139a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   agents: []
-  maxTouch: -1
+  causeEpisodeToEnd: 0
+  maxTouch: 1
   painForOverTouch: 0
   painForViolatinPrecondition: 0
-  rewardValue: -10
+  rewardValue: -1
   precondition: {fileID: 0}
-  multiplePrecondictions: {fileID: 0}
-  triggerOnStay: 1
+  multiplePreconditions: {fileID: 0}
+  triggerOnStay: 0
   allowNext: 0
+--- !u!114 &-5758688904424124206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7154991012949597961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9576c153ea70b7c30b97fcbf3af7574b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
